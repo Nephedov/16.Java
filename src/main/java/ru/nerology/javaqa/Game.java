@@ -1,18 +1,19 @@
 package ru.nerology.javaqa;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.HashMap;
 
 public class Game {
-    public List<Player> registeredPlayers = new ArrayList<>();
 
-    public void register(Player player) {
-        registeredPlayers.add(player);
+    private HashMap<String, Integer> registeredPlayers = new HashMap<>();
+
+    public void register(String playerName, int playerStrength) {
+        registeredPlayers.put(playerName, playerStrength);
     }
 
     boolean isRegistered(String name) {
-        for (Player player : registeredPlayers) {
-            if (player.getName().equals(name)) {
+        for (String key : registeredPlayers.keySet()) {
+            if (key.equals(name)) {
                 return true;
             }
         }
@@ -28,22 +29,28 @@ public class Game {
             throw new NotRegisteredException(playerName2 + " not registered");
         }
 
-        Player player1 = null, player2 = null;
+        int firstPlayerStrength = 0, secondPlayerStrength = 0;
 
-        for (Player player : registeredPlayers) {
-            if (player.getName().equals(playerName1)) {
-                player1 = player;
+
+        for (String key : registeredPlayers.keySet()) {
+            if (key.equals(playerName1)) {
+                int firstPlayerValue = registeredPlayers.get(key);
+                firstPlayerStrength = firstPlayerValue;
+
             }
 
-            if (player.getName().equals(playerName2)) {
-                player2 = player;
+            if (key.equals(playerName2)) {
+                int secondPlayerValue = registeredPlayers.get(key);
+                secondPlayerStrength = secondPlayerValue;
             }
         }
 
-        if (player1.getStrength() > player2.getStrength()) {
+        if (firstPlayerStrength > secondPlayerStrength) {
             return 1;
-        } else if (player1.getStrength() < player2.getStrength()) {
+        } else if (firstPlayerStrength < secondPlayerStrength) {
             return 2;
-        } else return 0;
+        } else {
+            return 0;
+        }
     }
 }
