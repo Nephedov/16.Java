@@ -12,13 +12,13 @@ public class Game {
     }
 
     boolean isRegistered(String name) {
-        for (String key : registeredPlayers.keySet()) {
-            if (key.equals(name)) {
-                return true;
-            }
-        }
-        return false;
+        return registeredPlayers.containsKey(name);
     }
+
+    public HashMap <String, Integer> findAll() {
+        return registeredPlayers;
+    }
+
 
     public int round(String playerName1, String playerName2) {
         if (!isRegistered(playerName1)) {
@@ -29,21 +29,8 @@ public class Game {
             throw new NotRegisteredException(playerName2 + " not registered");
         }
 
-        int firstPlayerStrength = 0, secondPlayerStrength = 0;
-
-
-        for (String key : registeredPlayers.keySet()) {
-            if (key.equals(playerName1)) {
-                int firstPlayerValue = registeredPlayers.get(key);
-                firstPlayerStrength = firstPlayerValue;
-
-            }
-
-            if (key.equals(playerName2)) {
-                int secondPlayerValue = registeredPlayers.get(key);
-                secondPlayerStrength = secondPlayerValue;
-            }
-        }
+        int firstPlayerStrength = findAll().get(playerName1);
+        int secondPlayerStrength = findAll().get(playerName2);
 
         if (firstPlayerStrength > secondPlayerStrength) {
             return 1;
