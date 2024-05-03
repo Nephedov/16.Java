@@ -14,7 +14,6 @@
 * Создан Maven проект и настроен <a href="https://github.com/Nephedov/16.Java/blob/2bfb42640c73e2e6793238d57a7c6cd805cd1133/pom.xml">pom.xml</a> с зависимостями и плагинами:
   * JunitJupier.
   * Surefire.
-  * Lombok.
   * Jacoco в режиме генерации отчетов и обрушения сборки по покрытию 100% по бранчам методов.
   * Настроен <a href="https://github.com/Nephedov/16.Java/blob/2bfb42640c73e2e6793238d57a7c6cd805cd1133/.github/workflows/maven.yml">maven.yml</a> для Github CI.
 * Реализован дата-класс <a href="https://github.com/Nephedov/16.Java/blob/2bfb42640c73e2e6793238d57a7c6cd805cd1133/src/main/java/ru/nerology/javaqa/Player.java">Player.java</a> - описывающий объект "игрока".
