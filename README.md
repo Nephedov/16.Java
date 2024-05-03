@@ -2,24 +2,32 @@
 
 ## Решения
 ### Задание 1
- * <a href="https://github.com/Nephedov/16.Java/tree/b94ed3bb5a86f551840b03c2e28b54c53c8e79a1/src/main/java/ru/nerology/javaqa">src/main/java/ru/nerology/javaqa</a>.
- * <a href="https://github.com/Nephedov/16.Java/blob/b94ed3bb5a86f551840b03c2e28b54c53c8e79a1/src/test/java/ru/nerology/javaqa/GameTest.java">GameTest.java</a>.
+ * <a href="https://github.com/Nephedov/16.Java/blob/b94ed3bb5a86f551840b03c2e28b54c53c8e79a1/src/test/java/ru/nerology/javaqa/GameTest.java">GameTest.java</a> - класс с автотестами.
+
+Ветка <a href="https://github.com/Nephedov/16.Java/tree/main">main</a> репозитория с проектом.
 ### Задание 2
- * <a href="https://github.com/Nephedov/16.Java/tree/5ec3e09a9ef444917220c6e89b5c87a7087a1407/src/main/java/ru/nerology/javaqa">src/main/java/ru/nerology/javaqa</a>.
- * <a href="https://github.com/Nephedov/16.Java/blob/5ec3e09a9ef444917220c6e89b5c87a7087a1407/src/test/java/ru/nerology/javaqa/GameTest.java">GameTest.java</a>.
+ * <a href="https://github.com/Nephedov/16.Java/blob/5ec3e09a9ef444917220c6e89b5c87a7087a1407/src/test/java/ru/nerology/javaqa/GameTest.java">GameTest.java</a> - класс с автотестами.
+
+Ветка <a href="https://github.com/Nephedov/16.Java/tree/fast">fast</a> репозитория с проектом.
 ## Что было сделано
-  * Создан и настроен Maven проект с плагинами:
-    * JunitJupier.
-    * Surefire.
-    * Lombok.
-    * Jacoco в режиме генерации отчетов и обрушения сборки по покрытию 100% по бранчам методов.
-    * Github Ci c verify-сборкой.
-  * Реализован дата-класс Player.java.
-  * Реализован класс Game.java - описывающий логику взаимодействия объектов Player, и хранением объектов в виде списка.
-  * Создан класс исключения NotRegisteredException.java, отнаследованный от RuntimeException - используемый в методе round() класса Game.java.
-  * Реализован класс с автотестами GameTest.java к классу Game.java.
-  * Создана ветка fast из ветки main в которой:
-    * В классе Game.java заменена коллекция списка на мапу (HashMap).
+### Задание 1
+* Создан Maven проект и настроен <a href="https://github.com/Nephedov/16.Java/blob/2bfb42640c73e2e6793238d57a7c6cd805cd1133/pom.xml">pom.xml</a> с зависимостями и плагинами:
+  * JunitJupier.
+  * Surefire.
+  * Lombok.
+  * Jacoco в режиме генерации отчетов и обрушения сборки по покрытию 100% по бранчам методов.
+  * Настроен <a href="https://github.com/Nephedov/16.Java/blob/2bfb42640c73e2e6793238d57a7c6cd805cd1133/.github/workflows/maven.yml">maven.yml</a> для Github CI.
+* Реализован дата-класс <a href="https://github.com/Nephedov/16.Java/blob/2bfb42640c73e2e6793238d57a7c6cd805cd1133/src/main/java/ru/nerology/javaqa/Player.java">Player.java</a> - описывающий объект "игрока".
+* Реализован класс <a href="https://github.com/Nephedov/16.Java/blob/2bfb42640c73e2e6793238d57a7c6cd805cd1133/src/main/java/ru/nerology/javaqa/Game.java">Game.java</a> -
+  описывающий логику взаимодействия объектов Player, и хранением объектов в виде списка.
+* Создан класс исключения <a href="https://github.com/Nephedov/16.Java/blob/2bfb42640c73e2e6793238d57a7c6cd805cd1133/src/main/java/ru/nerology/javaqa/NotRegisteredException.java">NotRegisteredException.java</a>,
+  отнаследованный от RuntimeException - используемый в методе round() класса
+  <a href="https://github.com/Nephedov/16.Java/blob/2bfb42640c73e2e6793238d57a7c6cd805cd1133/src/main/java/ru/nerology/javaqa/Game.java">Game.java</a>.
+* Реализован класс с автотестами <a href="https://github.com/Nephedov/16.Java/blob/2bfb42640c73e2e6793238d57a7c6cd805cd1133/src/test/java/ru/nerology/javaqa/GameTest.java">GameTest.java</a> проверяющий работу класса
+  <a href="https://github.com/Nephedov/16.Java/blob/2bfb42640c73e2e6793238d57a7c6cd805cd1133/src/main/java/ru/nerology/javaqa/Game.java">Game.java</a>.
+### Задание 2
+* Создана ветка <a href="https://github.com/Nephedov/16.Java/tree/fast">fast</a> из ветки <a href="https://github.com/Nephedov/16.Java/tree/main">main</a> в которой:
+  * В классе <a href="https://github.com/Nephedov/16.Java/blob/5ec3e09a9ef444917220c6e89b5c87a7087a1407/src/main/java/ru/nerology/javaqa/Game.java">Game.java</a> заменена коллекция списка на мапу (HashMap).
 
 # Задание 1. Турнир (обязательное к выполнению)
 Ваша задача — разработать класс, управляющий турниром игроков. Каждый игрок описывается дата-классом `Player` с полями `id`, `name`, `strength` (сила).
