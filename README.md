@@ -2,11 +2,14 @@
 
 ## Решения
 ### Задание 1
- * <a href="https://github.com/Nephedov/16.Java/blob/main/src/test/java/ru/nerology/javaqa/GameTest.java">GameTest.java</a> - класс с автотестами.
+* <a href="https://github.com/Nephedov/16.Java/blob/main/src/main/java/ru/nerology/javaqa/Player.java">Player.java</a> - описывающий объект "игрока".
+* <a href="https://github.com/Nephedov/16.Java/blob/main/src/main/java/ru/nerology/javaqa/Game.java">Game.java</a> - хранение и методы взаимодействия экземпляров Player в виде списка.
+* <a href="https://github.com/Nephedov/16.Java/blob/main/src/test/java/ru/nerology/javaqa/GameTest.java">GameTest.java</a> - класс с автотестами.
 
 Ветка <a href="https://github.com/Nephedov/16.Java/tree/main">main</a> репозитория с проектом.
 ### Задание 2
- * <a href="https://github.com/Nephedov/16.Java/blob/fast/src/test/java/ru/nerology/javaqa/GameTest.java">GameTest.java</a> - класс с автотестами.
+* <a href="https://github.com/Nephedov/16.Java/blob/fast/src/main/java/ru/nerology/javaqa/Game.java">Game.java</a> заменена коллекция списка на мапу (HashMap).
+* <a href="https://github.com/Nephedov/16.Java/blob/fast/src/test/java/ru/nerology/javaqa/GameTest.java">GameTest.java</a> - класс с автотестами.
 
 Ветка <a href="https://github.com/Nephedov/16.Java/tree/fast">fast</a> репозитория с проектом.
 ## Что было сделано
