@@ -31,6 +31,10 @@
 * Создана ветка <a href="https://github.com/Nephedov/16.Java/tree/fast">fast</a> из ветки <a href="https://github.com/Nephedov/16.Java/tree/main">main</a> в которой:
   * В классе <a href="https://github.com/Nephedov/16.Java/blob/fast/src/main/java/ru/nerology/javaqa/Game.java">Game.java</a> заменена коллекция списка на мапу (HashMap).
 
+---
+---
+
+
 # Описание Задания 1. Турнир (обязательное к выполнению)
 Ваша задача — разработать класс, управляющий турниром игроков. Каждый игрок описывается дата-классом `Player` с полями `id`, `name`, `strength` (сила).
 
